@@ -7,7 +7,7 @@ Hi, I'm Rohith Yerramsetti 👋
 
   Backend Developer · API Engineer · Microservices
 
-  Kakinada, India  ·  Open to remote opportunities
+  Open to remote opportunities
 
 
 
