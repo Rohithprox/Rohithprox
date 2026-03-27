@@ -14,7 +14,7 @@
 
 ## 👤 About Me
 
-Backend developer with **production experience across two organisations**, building systems end-to-end — database design, REST APIs, microservice architecture, third-party integrations, and deployment.
+Backend developer with **production experience across two organisations**, building systems end-to-end database design, REST APIs, microservice architecture, third-party integrations, and deployment.
 
 Comfortable in both the **Java/Spring Boot** and **Node.js/NestJS** ecosystems. I care about clean architecture, reliable APIs, and shipping things that actually work in production.
 
