@@ -14,7 +14,7 @@
 
 ## 👤 About Me
 
-Backend developer with **production experience across two organisations**, building systems end-to-end database design, REST APIs, microservice architecture, third-party integrations, and deployment.
+Backend developer with **production experience across two organisations**, building systems end-to-end database design, REST APIs, microservice architecture, third-party integrations, CI CD pipelines and deployment.
 
 Comfortable in both the **Java/Spring Boot** and **Node.js/NestJS** ecosystems. I care about clean architecture, reliable APIs, and shipping things that actually work in production.
 
@@ -73,41 +73,21 @@ Comfortable in both the **Java/Spring Boot** and **Node.js/NestJS** ecosystems. 
 
 ## 🚀 Featured Projects
 
-### 💰 Indian Currency Wallet
-> A digital wallet system built for INR transactions — supports deposits, withdrawals, peer-to-peer transfers, and transaction history with real-time balance tracking.
+### 🇮🇳 Indian Currency Wallet
+> A production-ready digital wallet REST API for INR transactions — built with Spring Boot 3, JWT authentication, PostgreSQL, Redis, and Razorpay.
 
-**Stack:** `NestJS` · `PostgreSQL` · `Prisma ORM` · `Redis` · `Razorpay`
+**Stack:** `Java 17` · `Spring Boot 3` · `Spring Security + JWT` · `PostgreSQL` · `Redis` · `Razorpay` · `Flyway` · `Docker`
 
-- Wallet creation and KYC-lite user onboarding flow
-- **Razorpay integration** for fund deposits via UPI / Net Banking
-- Atomic P2P transfers with double-entry ledger pattern to prevent inconsistency
-- Redis-cached balance reads with write-through invalidation
-- Full transaction history with filters (date range, type, status)
-- Webhook listener for Razorpay payment confirmation events
+- **OTP-based mobile authentication** with Redis-backed rate limiting (5 attempts / 10 min)
+- **Peer-to-peer transfers** via UPI ID or mobile number with atomic balance operations and pessimistic DB locking
+- **Razorpay deposit flow** — order creation + HMAC-SHA256 payment signature verification
+- **Bank withdrawals** via Razorpay Payout API with automatic balance reversal on failure
+- **KYC compliance** with tiered transaction limits (unverified: max ₹10k balance, ₹5k transfers)
+- **Admin dashboard** — platform-wide analytics, wallet freeze/unfreeze, force KYC verify
+- Double-entry ledger pattern, `BigDecimal` scale 2 throughout, `@Transactional` on all multi-step writes
+- Full Swagger UI at `/swagger-ui.html` + structured JSON error responses
 
-[![View Repo](https://img.shields.io/badge/View%20Repo-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rohithprox/indian-currency-wallet)
-
----
-
-### 🤖 Unified Agent API
-> Seamless interface for creating AI voice agents with both **Vapi** and **Retell** from a single API surface.
-
-**Stack:** `Python` · `FastAPI` · `Vapi SDK` · `Retell SDK`
-
-- Provider-agnostic agent creation — switch between Vapi and Retell without changing client code
-- Configurable voice, model, language, and webhook params per request
-- Clean abstraction layer with a unified response schema regardless of provider
-
-[![View Repo](https://img.shields.io/badge/View%20Repo-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rohithprox/assignment1-api)
-
----
-
-### 🌐 GIST WebApp
-> Full-stack web application — GIST platform v1.0
-
-**Stack:** `NestJS` · `TypeScript` · `PostgreSQL`
-
-[![View Repo](https://img.shields.io/badge/View%20Repo-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rohithprox/GIST-WEBAPP-v.1.0)
+[![View Repo](https://img.shields.io/badge/View%20Repo-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rohithprox/Indian_Currency_Wallet)
 
 ---
 
